@@ -14,12 +14,15 @@ namespace DataAccess.Contexts
     {
         protected IConfiguration Configuration { get; set; } // Configuration: upsettingi apideki okumaya yarar.
         public DbSet<Product> Products { get; set; } //DbSet: Mapping
+        public DbSet<Category> Categories { get; set; }
         public NorthwindContext(DbContextOptions dbContextOptions, IConfiguration configuration) : base(dbContextOptions) 
         { 
             Configuration = configuration; 
             Database.EnsureCreated(); //veri tabanını yönetecek
         }
 
+        //ApplyConfigurationsFromAssembly: CONFİGURASYONLARI YÜKLE- MEVCUT ÇALIŞAN UYGULAMADAN
+        
         protected override void OnModelCreating(ModelBuilder modelBuilder) //model yönetecek
         { 
             modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly()); 

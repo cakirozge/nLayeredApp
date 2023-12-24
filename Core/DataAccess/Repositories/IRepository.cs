@@ -31,6 +31,7 @@ namespace Core.DataAccess.Repositories
             bool enableTracking = true
         );
 
+        //pAGİNATE -- DENEME İÇİN IPagınate yaptım.
         Paginate<TEntity> GetListByDynamic( //Dynamic Query: kullanıcı hangilerini girdiyse onu getirir.
             DynamicQuery dynamic,
             Expression<Func<TEntity, bool>>? predicate = null,

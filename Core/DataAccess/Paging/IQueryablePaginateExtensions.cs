@@ -48,5 +48,5 @@ namespace Core.DataAccess.Paging
                 };
             return list;
         }
-    }s
+    }
 }

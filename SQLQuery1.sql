@@ -1,0 +1,1 @@
+﻿update Products set CreatedDate = '01.01.2023'
